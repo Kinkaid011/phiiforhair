@@ -1,0 +1,271 @@
+@import 'base';
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, .logo {  
+    font-family: 'Lobster', cursive;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+        margin: 5px 0;
+        font-weight: 300;
+    }
+}
+
+section {
+    margin: 50px 0;
+}  
+
+.hero {
+    height: 100vh;
+    position: relative;
+    background-image: url('/images/shop-redo-2.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+
+    .bg-overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        background-color: rgba(245, 138, 7, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            color: white;
+            padding: 30px 30px;
+            border: 3px solid white;
+        }
+    }
+}
+
+.about {
+    display: grid;
+    grid-gap: 2em;
+
+    .about-info {
+        display: grid;
+        grid-gap: 1em;
+    }
+
+    img {
+        height: 390px;
+        width: 100%;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .25fr 1.5fr .25fr;
+    grid-gap: .25em;
+
+    
+
+    .quote {
+        grid-column: 1 /span 4;
+        grid-row: 2;
+        height: 425px;
+        width: 100%;
+        background-color: #262626;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .top-pic {
+        grid-column: 1 /span 4;
+        grid-row: 1;
+    }
+
+    .bottom-pic {
+        grid-column: 1 /span 4;
+        grid-row: 3;
+    }
+}
+
+.prices {
+    display: grid;
+    grid-gap: 1em;
+
+    .cut-prices, .kids-prices {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        padding: 30px 0;
+
+        h5 {
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+       
+    }
+
+    .cut-prices {
+        border: 1px solid  rgba(211, 211, 211, 0.75);
+        
+    }
+
+    .kids-prices {
+        background-color: rgba(211, 211, 211, 0.275);
+    }
+
+}
+
+.booking {
+    display: grid;
+    grid-gap: 2em;
+
+    p {
+        margin: 0;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        color: white;
+        background-color: #FF9900;
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+
+    .contact,.message,.location {
+        justify-self: center;
+        text-align: center;
+    }
+}
+
+footer {
+    height: 150px;
+    background-color: rgba(211, 211, 211, 0.5);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
+}
+
+@media(min-width: 768px) {
+
+    .hero {
+        h1 {
+            font-size: 4rem;
+        }
+    }
+
+    .about {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+
+        p {
+            margin: 0;
+        }
+        
+    
+        .about-info {
+            display: grid;
+            grid-gap: 1em;
+        }
+    
+        img {
+            height: 390px;
+            width: 100%;
+            align-self: center;
+            position: relative;
+            bottom: 20px;
+        }
+
+        .span3 {
+            grid-column: 1 /span 3;
+        }
+    }
+
+    .gallery {  
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: .25em;
+
+        .quote {
+            grid-column: 1 /span 2;
+            grid-row: 1 /span 4;
+            height: auto;
+            width: 100%;
+            background-color: #262626;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    
+        .top-pic {
+            grid-column: 3 /span 2;
+            grid-row: 1 /span 2;
+        }
+    
+        .bottom-pic {
+            grid-column: 3 /span 2;
+            grid-row: 3 /span 4;
+        }
+
+        
+    }
+
+    .cut-prices, .kids-prices {
+        width: 450px;
+        margin: auto;
+       
+    }
+
+    .booking {
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        height: 400px;
+        grid-gap: 1.5em;
+    }
+
+}
+
+@media(min-width: 992px) {
+    .hero {
+        h1 {
+            font-size: 5rem;
+        }
+    }
+
+    .about {
+        margin: 100px 0;
+    }
+}

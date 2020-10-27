@@ -1,0 +1,309 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, .logo {
+  font-family: 'Lobster', cursive;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+  font-weight: 300;
+}
+
+section {
+  margin: 50px 0;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  background-image: url("/images/shop-redo-2.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.hero .bg-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: rgba(245, 138, 7, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero .bg-overlay h1 {
+  color: white;
+  padding: 30px 30px;
+  border: 3px solid white;
+}
+
+.about {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2em;
+}
+
+.about .about-info {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+}
+
+.about img {
+  height: 390px;
+  width: 100%;
+}
+
+.gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: .25fr 1.5fr .25fr;
+      grid-template-rows: .25fr 1.5fr .25fr;
+  grid-gap: .25em;
+}
+
+.gallery .quote {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 /span 4;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  height: 425px;
+  width: 100%;
+  background-color: #262626;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.gallery .top-pic {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 /span 4;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.gallery .bottom-pic {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 /span 4;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+.prices {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+}
+
+.prices .cut-prices, .prices .kids-prices {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.prices .cut-prices h5, .prices .kids-prices h5 {
+  font-weight: bold;
+}
+
+.prices .cut-prices ul, .prices .kids-prices ul {
+  margin: 0;
+}
+
+.prices .cut-prices li, .prices .kids-prices li {
+  margin: 10px 0;
+}
+
+.prices .cut-prices {
+  border: 1px solid rgba(211, 211, 211, 0.75);
+}
+
+.prices .kids-prices {
+  background-color: rgba(211, 211, 211, 0.275);
+}
+
+.booking {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2em;
+}
+
+.booking p {
+  margin: 0;
+}
+
+.booking button {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #FF9900;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.booking .contact, .booking .message, .booking .location {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-align: center;
+}
+
+footer {
+  height: 150px;
+  background-color: rgba(211, 211, 211, 0.5);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+  .about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+  }
+  .about p {
+    margin: 0;
+  }
+  .about .about-info {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 1em;
+  }
+  .about img {
+    height: 390px;
+    width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    position: relative;
+    bottom: 20px;
+  }
+  .about .span3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 /span 3;
+  }
+  .gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: .25em;
+  }
+  .gallery .quote {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 /span 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 4;
+    grid-row: 1 /span 4;
+    height: auto;
+    width: 100%;
+    background-color: #262626;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .gallery .top-pic {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 /span 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 /span 2;
+  }
+  .gallery .bottom-pic {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 /span 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 4;
+    grid-row: 3 /span 4;
+  }
+  .cut-prices, .kids-prices {
+    width: 450px;
+    margin: auto;
+  }
+  .booking {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    text-align: center;
+    height: 400px;
+    grid-gap: 1.5em;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero h1 {
+    font-size: 5rem;
+  }
+  .about {
+    margin: 100px 0;
+  }
+}
